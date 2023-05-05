@@ -62,6 +62,7 @@ resource "aws_security_group" "alb" {
   name = "${var.cluster_name}-alb"  
 }
 
+
 resource "aws_security_group_rule" "allow_http_inbound" {
   type              = "ingress"
   security_group_id = aws_security_group.alb.id
